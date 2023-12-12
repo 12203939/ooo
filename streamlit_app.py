@@ -14,3 +14,7 @@ probability = stats.norm.cdf(x, loc=mean, scale=std)
 
 # 結果を表示
 st.write('平均が {} で標準偏差が {} の正規分布において、確率変数が {} 以下である確率は {:.4f} です。'.format(mean, std, x, probability))
+
+# 確率を四捨五入してから結果を表示
+rounded_probability = round(probability, 3)
+st.write('平均が {} で標準偏差が {} の正規分布において、確率変数が {} 以下である確率は {:.3f} です。'.format(mean, std, x, rounded_probability))
